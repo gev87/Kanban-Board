@@ -1,0 +1,79 @@
+.taskCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.taskCard > div {
+  color: var(--text-regular);
+  font-size: 14px;
+  letter-spacing: -0.4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.taskCard > div > strong {
+  color: var(--text-bold);
+}
+
+.taskCard > div > strong.expired {
+  color: var(--red);
+}
+
+.taskCard > .add-button {
+  margin-left: auto;
+}
+.buttonRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+.dateInput {
+  position: relative;
+  background: none;
+  color: var(--text-regular);
+  border: 1px solid var(--text-regular);
+  max-width: 200px;
+  width: 100%;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 22px;
+  box-sizing: border-box;
+}
+.dateInput::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dateInput:focus,
+.multilineInput:focus {
+  border-color: var(--blue);
+  outline: none;
+}
+
+.multilineInput {
+  border: 1px solid var(--text-regular);
+  resize: both;
+  background: none;
+  width: 200px;
+  color: var(--text-regular);
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 4px;
+  min-height: 22px;
+  font-size: 14px;
+  overflow: hidden;
+}

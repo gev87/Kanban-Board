@@ -1,0 +1,68 @@
+.column {
+  background-color: rgba(0, 0, 0, 0.7);
+  flex: 1;
+  border-radius: 4px;
+  padding: 16px;
+  max-width: 398px;
+  min-width: 147px;
+  width: 100%;
+  position: relative;
+  max-height: calc(100vh - 170px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #444;
+}
+
+.column > button.addButton {
+  all: unset;
+  cursor: pointer;
+  color: var(--text-regular);
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  transition: color 0.2s;
+  font-size: 14px;
+}
+.column > button.addButton:hover {
+  color: var(--blue);
+}
+
+.columnTitle {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  color: var(--text-bold);
+  display: flex;
+  gap: 5px;
+}
+
+.droppableArea {
+  min-height: 100px;
+}
+
+.draggableItem {
+  margin-bottom: 8px;
+}
+
+.trashBin {
+  position: absolute;
+  top: 32px;
+  right: 5px;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+@media (max-width: 900px) {
+  .column > button.addButton {
+    top: 10px;
+  }
+  .column > h2 {
+    font-size: 1.2rem;
+  }
+  .trashBin {
+    top: 26px;
+  }
+}
